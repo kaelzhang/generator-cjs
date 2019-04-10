@@ -1,10 +1,10 @@
 {
-  "name": "{{package_name}}",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "{{package_description}}",
+  "description": "{{description}}",
   "main": "src/index.js",
   "scripts": {
-    "test": "NODE_DEBUG={{package_name}} nyc ava --timeout=10s --verbose",
+    "test": "NODE_DEBUG={{name}} nyc ava --timeout=10s --verbose",
     "test:only": " nyc ava --timeout=10s --verbose",
     "lint": "eslint .",
     "posttest": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
@@ -17,7 +17,7 @@
     "url": "{{git_clone_url}}"
   },
   "keywords": [
-    "{{package_name}}"
+    "{{name}}"
   ],
   "engines": {
     "node": ">= 6"
@@ -28,7 +28,7 @@
       "test/*.test.js"
     ]
   },
-  "author": "{{npm_user}}",
+  "author": "{{user}}",
   "license": "MIT",
   "bugs": {
     "url": "{{git_issue_url}}"

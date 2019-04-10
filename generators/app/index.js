@@ -12,6 +12,8 @@ const DEFAULT_PROPS = {
   package_json: 'package.json'
 }
 
+const getJsName = name => name.replace(/^\d+/, '').replace(/-/g, '_')
+
 module.exports = class BFFGenerator extends Generator {
   prompting () {
     // Have Yeoman greet the user.
@@ -29,12 +31,21 @@ module.exports = class BFFGenerator extends Generator {
 
   async writing () {
     const {
-      git: parsed
+      git: parsed,
+      name,
     } = this.props
+
+    const {
+      user,
+      repo
+    } = parsed
 
     const data = {
       ...DEFAULT_PROPS,
       ...this.props,
+      js_name: getJsName(name),
+      user,
+      repo,
       git_clone_url: parsed.git_clone_url,
       git_issue_url: `${parsed.https_href}/issues`
     }
