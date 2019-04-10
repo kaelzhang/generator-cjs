@@ -1,37 +1,37 @@
 {
-  "name": "generator-cjs",
+  "name": "{{package_name}}",
   "version": "1.0.0",
-  "description": "Yeoman generator to create a CommonJS project",
+  "description": "{{package_description}}",
+  "main": "src/index.js",
   "scripts": {
-    "test": "nyc ava --timeout=10s",
-    "test-no-report": "NODE_DEBUG=generator-cjs nyc ava --timeout=10s --verbose",
+    "test": "NODE_DEBUG={{package_name}} nyc ava --timeout=10s --verbose",
+    "test:only": " nyc ava --timeout=10s --verbose",
     "lint": "eslint .",
     "posttest": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [
-    "generators"
+    "src/"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/kaelzhang/generator-cjs.git"
+    "url": "{{git_clone_url}}"
   },
   "keywords": [
-    "generator-cjs",
-    "generator",
-    "yeoman generator",
-    "commonjs",
-    "generator commonjs"
+    "{{package_name}}"
   ],
   "engines": {
     "node": ">= 6"
   },
   "ava": {
-    "babel": false
+    "babel": false,
+    "files": [
+      "test/*.test.js"
+    ]
   },
-  "author": "kaelzhang",
+  "author": "{{npm_user}}",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kaelzhang/generator-cjs/issues"
+    "url": "{{git_issue_url}}"
   },
   "devDependencies": {
     "ava": "^1.4.1",

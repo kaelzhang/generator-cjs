@@ -15,18 +15,24 @@
 
 # generator-cjs
 
-<!-- description -->
+Yeoman generator to create a CommonJS project
 
 ## Install
 
 ```sh
-$ npm i generator-cjs
+$ npm i -g generator-cjs
 ```
 
 ## Usage
 
-```js
-import generator_cjs from 'generator-cjs'
+```sh
+# It is recommanded to clone the empty repo first,
+# `generator-cjs` reads the git remote url and set default prompts values.
+git clone git@github.com:my-name/my-empty-repo.git
+
+cd my-empty-repo
+
+yo cjs
 ```
 
 ## License
