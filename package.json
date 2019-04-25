@@ -1,6 +1,6 @@
 {
   "name": "generator-cjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Yeoman generator to create a CommonJS project",
   "scripts": {
     "test": "nyc ava --timeout=10s",
@@ -26,7 +26,10 @@
     "node": ">= 6"
   },
   "ava": {
-    "babel": false
+    "babel": false,
+    "files": [
+      "test/*.test.js"
+    ]
   },
   "author": "kaelzhang",
   "license": "MIT",

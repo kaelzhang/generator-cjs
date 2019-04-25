@@ -7,6 +7,7 @@
     "test": "NODE_DEBUG={{name}} nyc ava --timeout=10s --verbose",
     "test:only": " nyc ava --timeout=10s --verbose",
     "lint": "eslint .",
+    "fix": "eslint . --fix",
     "posttest": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "files": [

@@ -13,6 +13,7 @@ const DEFAULT_PROPS = {
 }
 
 const getJsName = name => name.replace(/^\d+/, '').replace(/-/g, '_')
+const getPathName = name => name.replace(/\//g, '-').replace('@', '')
 
 module.exports = class BFFGenerator extends Generator {
   prompting () {
@@ -44,6 +45,7 @@ module.exports = class BFFGenerator extends Generator {
       ...DEFAULT_PROPS,
       ...this.props,
       js_name: getJsName(name),
+      path_name: getPathName(name),
       user,
       repo,
       git_clone_url: parsed.git_clone_url,

@@ -26,7 +26,7 @@ $ npm i {{name}}
 ## Usage
 
 ```js
-import {{js_name}} from '{{name}}'
+const {{js_name}} = require('{{name}}')
 ```
 
 ## License
