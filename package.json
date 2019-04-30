@@ -1,6 +1,6 @@
 {
   "name": "generator-cjs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Yeoman generator to create a CommonJS project",
   "scripts": {
     "test": "nyc ava --timeout=10s",

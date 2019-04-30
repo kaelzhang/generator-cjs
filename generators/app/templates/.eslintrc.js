@@ -1,3 +1,3 @@
 module.exports = {
-  extends: require.resolve('eslint-config-ostai')
+  extends: require.resolve('@ostai/eslint-config')
 }
