@@ -12,8 +12,14 @@ const DEFAULT_PROPS = {
   package_json: 'package.json'
 }
 
-const getJsName = name => name.replace(/^\d+/, '').replace(/-/g, '_')
-const getPathName = name => name.replace(/\//g, '-').replace('@', '')
+const removeScope = s => .replace(/^@[a-z0-9]+/, '')
+
+const getJsName = name => removeScope(name)
+.replace(/^\d+/, '')
+.replace(/-/g, '_')
+
+const getPathName = name => removeScope(name)
+.replace(/\//g, '-')
 
 module.exports = class BFFGenerator extends Generator {
   prompting () {
