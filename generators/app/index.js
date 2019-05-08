@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   package_json: 'package.json'
 }
 
-const removeScope = s => .replace(/^@[a-z0-9]+/, '')
+const removeScope = s => s.replace(/^@[a-z0-9]+/, '')
 
 const getJsName = name => removeScope(name)
 .replace(/^\d+/, '')
