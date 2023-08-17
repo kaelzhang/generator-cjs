@@ -48,6 +48,7 @@ node_modules
 old/
 *-old/
 *-notrack/
+*.no_track.*
 no-track/
 build/
 combo/
