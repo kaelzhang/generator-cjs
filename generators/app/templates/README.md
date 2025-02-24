@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/{{user}}/{{repo}}/actions/workflows/nodejs.yml/badge.svg)](https://github.com/{{user}}/{{repo}}/actions/workflows/nodejs.yml)
-[![Coverage](https://codecov.io/gh/{{user}}/{{repo}}/branch/master/graph/badge.svg)](https://codecov.io/gh/{{user}}/{{repo}})
+[![Coverage](https://codecov.io/gh/{{user}}/{{repo}}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{user}}/{{repo}})
 
 # {{name}}
 
